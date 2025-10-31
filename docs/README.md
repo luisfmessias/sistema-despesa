@@ -1,23 +1,23 @@
 # Sistema de Controle de Despesas
 
-## 🎯 Objetivo
+##  Objetivo
 Sistema simples para controle de despesas pessoais, permitindo o cadastro de despesas, pagamentos e usuários, com registro em arquivos de texto.
 
-## 🧩 Funcionalidades
+##  Funcionalidades
 - Entrar nova despesa  
 - Anotar pagamento  
 - Listar despesas pagas ou em aberto  
 - Gerenciar tipos de despesa  
 - Gerenciar usuários (com criptografia de senha)
 
-## 🧠 Conceitos de POO Utilizados
+##  Conceitos de POO Utilizados
 - Classes e objetos  
 - Herança e polimorfismo  
 - Sobrecarga de construtores  
 - Métodos estáticos  
-- Criptografia simples  
-
-## 🧱 Estrutura de Pastas
+- Criptografia simples
+  
+##  Estrutura de Pastas
 
 sistema-controle-despesas/
 │
