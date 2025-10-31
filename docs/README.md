@@ -29,7 +29,7 @@ sistema-controle-despesas/
 └── docs/
 └── README.md
 
-## 🚀 Versões
+##  Versões
 **v0.0.1** → Criação do menu principal com opções básicas.  
 **v0.0.2** → Adição das classes `Despesa` e `Usuario`.  
 **v0.1.0 (Final)** → Consolidação das entregas anteriores e documentação completa.
