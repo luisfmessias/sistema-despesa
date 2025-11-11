@@ -1,3 +1,6 @@
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 public class Usuario {
     private String nome;
     private String login;
@@ -6,19 +9,25 @@ public class Usuario {
     public Usuario(String nome, String login, String senha) {
         this.nome = nome;
         this.login = login;
-        this.senhaCriptografada = criptografar(senha);
+        this.senhaCriptografada = criptografarSenha(senha);
     }
 
-    private String criptografar(String senha) {
-        return Integer.toHexString(senha.hashCode());
+    private String criptografarSenha(String senha) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hash = md.digest(senha.getBytes());
+            StringBuilder hexString = new StringBuilder();
+            for (byte b : hash) {
+                hexString.append(String.format("%02x", b));
+            }
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("Erro ao criptografar senha", e);
+        }
     }
 
-    public String getLogin() {
-        return login;
-    }
-
-    public boolean validarSenha(String senha) {
-        return this.senhaCriptografada.equals(Integer.toHexString(senha.hashCode()));
+    public boolean autenticar(String login, String senha) {
+        return this.login.equals(login) && this.senhaCriptografada.equals(criptografarSenha(senha));
     }
 
     @Override
