@@ -30,5 +30,17 @@ sistema-controle-despesas/
 └── README.md
 
 
-| **v0.0.2** | Separação de responsabilidades (Despesa, Usuário, TipoDespesa), início do MVP e POC de funcionamento. |
+## Versões
+**v0.0.1** → Criação do menu principal com opções básicas.  
+**v0.0.2** → Separação de classes e definição do MVP inicial.  
+**v0.0.3** → MVP funcional completo, README documentado e tag de versão adicionada.  
+
+## Changelog
+
+### [v0.0.3] - MVP Pronto
+- Menu principal completo com todas as opções.
+- Classes `Despesa`, `TipoDespesa`, `Usuario` e `Pagamento` criadas.
+- Estrutura de diretórios revisada.
+- README documentado e atualizado.
+
 
